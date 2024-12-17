@@ -1,6 +1,5 @@
 # PrePayCafteriaSystemKOT
 
-# PrePayCafeteriaSystem
 # KOT Project
 
 ## Overview
