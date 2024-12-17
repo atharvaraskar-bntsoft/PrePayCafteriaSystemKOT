@@ -1,0 +1,735 @@
+{
+	"info": {
+		"_postman_id": "9cd6fb9d-af7a-464b-a1db-b7f0189c2683",
+		"name": "PrePayCafeteria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35103354",
+		"_collection_link": "https://www.postman.com/bnt-soft-8585/workspace/prepaycafeteriasystem/collection/35103354-9cd6fb9d-af7a-464b-a1db-b7f0189c2683?action=share&source=collection_link&creator=35103354"
+	},
+	"item": [
+		{
+			"name": "UserRoleApi",
+			"item": [
+				{
+					"name": "saveUserRole",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleName\": \"DESIGNATED VENDOR ADMIN\",\r\n    \"isDesigned\": \"Y\",\r\n    \"createdBy\": 1,\r\n    \"createdOn\": \"2023-07-18T14:30:00Z\",\r\n    \"updatedBy\": 1,\r\n    \"updatedOn\": \"2023-07-18T15:45:00Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/userrole",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"userrole"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUserRole",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/userrole",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"userrole"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserRoleByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/userrole/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"userrole",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUserRole",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/userrole/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"userrole",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUserRole",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleName\": \"EMPLOYEE\",\r\n    \"isDesigned\": \"N\",\r\n    \"createdBy\": 1,\r\n    \"createdOn\": \"2023-07-18T14:30:00Z\",\r\n    \"updatedBy\": 1,\r\n    \"updatedOn\": \"2023-07-18T15:45:00Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/userrole",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"userrole"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UsersApi",
+			"item": [
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"johny\",\r\n  \"userRole\": {\r\n    \"id\": 1\r\n  },\r\n  \"device\": 12345,\r\n  \"email\": \"john.doe@example.com\",\r\n  \"phoneNumber\": \"+1234567890\",\r\n  \"active\": true,\r\n  \"createdBy\": 1,\r\n  \"createdOn\": \"2024-08-12T07:25:06\",\r\n  \"updatedBy\": 1,\r\n  \"updatedOn\": \"2024-08-12T07:25:06\",\r\n  \"vendorsList\": [\r\n    {\r\n      \"id\": 1\r\n    },\r\n    {\r\n      \"id\": 2\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUsers",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \"id\":1,\r\n  \"userName\": \"john_doe\",\r\n  \"userRole\": {\r\n    \"id\": 2\r\n  },\r\n  \"device\": 12345,\r\n  \"email\": \"john.doe@example.com\",\r\n  \"phoneNumber\": \"+1234567890\",\r\n  \"active\": true,\r\n  \"createdBy\": 1,\r\n  \"createdOn\": \"2024-07-25 10:30:00\",\r\n  \"updatedBy\": 3,\r\n  \"updatedOn\": \"2024-07-25 10:30:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUsers",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VendorApi",
+			"item": [
+				{
+					"name": "createVendor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyId\": 1001,\r\n    \"vendorName\": \"Haldiram\",\r\n    \"contactFirstName\": \"Ramesh\",\r\n    \"contactLastName\": \"Agarwal\",\r\n    \"contactEmail\": \"ramesh.agarwal@haldiram.com\",\r\n    \"contactMobile\": 9876543210,\r\n    \"isDesigned\": \"yes\",\r\n    \"active\": true,\r\n    \"createdBy\": 1,\r\n    \"createdOn\": \"2024-08-08T10:00:00Z\",\r\n    \"updatedBy\": 1,\r\n    \"updatedOn\": \"2024-08-08T10:00:00Z\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/vendor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"vendor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getVendors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/vendor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"vendor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getVendorById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/vendor/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"vendor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteVendor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/vendor/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"vendor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vendor_UsersApi",
+			"item": [
+				{
+					"name": "add_Vendors_users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n\t  \"userId\":1,\r\n    \"vendorId\":1    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/vendorusers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"vendorusers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_Vendor_users",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n\t  \"userId\":1,\r\n      \"vendorId\":1    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/vendorusers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"vendorusers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ServingCounter",
+			"item": [
+				{
+					"name": "AddServingCounter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Snacks Counter\",\r\n    \"active\": true,\r\n    \"updatedBy\": 1,\r\n    \"updatedOn\": \"2024-08-12\",\r\n    \"createdBy\": 1,\r\n    \"createdOn\": \"2024-08-01\",\r\n    \"vendorId\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/servingCounter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"servingCounter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getServingCounterBYId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/servingCounter/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"servingCounter",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllServingCounters",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MenuCategory",
+			"item": [
+				{
+					"name": "createMenuCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Snacks\",\r\n  \"description\": \"diverse collection of snacks\",\r\n  \"createdBy\": 1,\r\n  \"createdOn\": \"2024-08-14\",\r\n  \"updatedBy\": 1,\r\n  \"updatedOn\": \"2024-08-14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/menucategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"menucategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMenuCategoryById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/menucategory/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"menucategory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllMenuCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/menucategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"menucategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateMenuCategory",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \"id\":1,\r\n  \"name\": \"Snacks\",\r\n  \"description\": \"diverse collection of snacks.\",\r\n  \"createdBy\": 1,\r\n  \"createdOn\": \"2024-08-14\",\r\n  \"updatedBy\": 1,\r\n  \"updatedOn\": \"2024-08-14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/menucategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"menucategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteMenuCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/menucategory/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"menucategory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MenuItemApi",
+			"item": [
+				{
+					"name": "createMenuItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"name\": \"Aloo Bhujia\",\r\n    \"price\": 50,\r\n    \"description\": \"Aloo Bhujia is  snack has a nice highly spiced flavour.\",\r\n    \"available\": \"Y\",  \r\n    \"vegFlag\": \"Y\",  \r\n    \"active\": \"Y\",  \r\n    \r\n    \"menuCategoryId\": 1,  \r\n    \"vendorId\": 1,  \r\n    \"servingCounterId\": 1,  \r\n    \r\n    \"createdBy\": 1,  \r\n    \"createdOn\": \"2024-08-15T12:00:00\",  \r\n    \"updatedBy\": 1,  \r\n    \"updatedOn\": \"2024-08-15T13:00:00\"  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/menuitem",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"menuitem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gatMenuItems",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order APis",
+			"item": [
+				{
+					"name": "createOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"orderNumber\": \"ORD123456\",\r\n  \"totalPrice\": 250.75,\r\n  \"status\": \"P\",\r\n  \"createdBy\": 1,\r\n  \"createdOn\": \"2024-08-21T14:30:00\",\r\n  \"updatedBy\": 2,\r\n  \"updatedOn\": \"2024-08-21T15:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateOrder",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\":1,\r\n  \"orderNumber\": \"ORD123456\",\r\n  \"totalPrice\": 250,\r\n  \"status\": \"1\",\r\n  \"createdBy\": 1,\r\n  \"createdOn\": \"2024-08-21T14:30:00\",\r\n  \"updatedBy\": 1,\r\n  \"updatedOn\": \"2024-08-21T15:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OrderItemsApis",
+			"item": [
+				{
+					"name": "createOrderItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"orderId\": 1,\r\n  \"menuItemId\": 1,\r\n  \"unitPrice\": 50,\r\n  \"totalPrice\": 250,\r\n  \"quantity\": 5,\r\n  \"status\": \"PENDING\",\r\n  \"createdBy\": 1,\r\n  \"updatedBy\": 3,\r\n  \"createdOn\": \"2024-08-21T14:30:00\",\r\n  \"updatedOn\": \"2024-08-21T15:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cafeteriaapi/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cafeteriaapi",
+								"order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
